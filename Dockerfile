@@ -16,7 +16,7 @@ COPY . .
 # Projemizin bulunduğu dizine tekrar geliyoruz ve projemizi çalıştırmaya hazırlanıyoruz
 
 FROM develop-stage AS build-stage
-RUN npm build
+RUN npm run build
 
 # Projemizi çalıştırıyor ve port 8080'a bind ediyoruz
 FROM nginx:1.23.3-alpine AS production-stage
